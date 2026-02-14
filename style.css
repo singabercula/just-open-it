@@ -1,0 +1,174 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+/* Background halaman */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background: linear-gradient(135deg, #030203, #ad0101);
+    
+}
+
+/* Kartu utama */
+.card {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 400px;
+    padding: 25px;
+    text-align: center;
+
+    border-radius: 35px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+
+    transition: all 0.4s ease;
+}
+
+/* Efek hover */
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Foto profil */
+.profile-img {
+    width: 175px;
+    height: 175px;
+    object-fit:cover;
+    border-radius: 30%;
+    margin-bottom: 15px;
+
+    border: 5px solid #ffffff;
+}
+
+/* Nama */
+.card h1 {
+    font-size: 23px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+/* Deskripsi */
+.card p {
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+/* Social links */
+.social-links {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.social-links li {
+    margin: 7px 0;
+}
+
+.social-links a {
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #0b87cf;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ff0101;
+}
+
+/* Tombol */
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: bold;
+
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+
+    background: linear-gradient(135deg, #4411a3, #63ee57);
+    color: white;
+
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.5);
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    text-decoration: none;
+    font-weight: 500;
+    color: #667eea;
+    transition: all 0.3s ease;
+}
+
+.social-links a i {
+    font-size: 16px;
+}
+
+.social-links a:hover {
+    transform: translateX(5px);
+}
+.fa-instagram { color: #E1306C; }
+.fa-youtube { color: #FF0000; }
+.fa-comments { color: #4CAF50; }
+
+/* Styling Notifikasi Pop-up */
+#toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 16px;
+
+    position: fixed;
+    z-index: 999;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+}
+
+/* Saat toast aktif */
+#toast.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animasi masuk */
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+/* Animasi keluar */
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
